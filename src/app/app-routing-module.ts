@@ -11,6 +11,14 @@ const routes: Routes = [
     loadChildren: () => import('./modules/products/products-module').then(m => m.ProductsModule)
   },
   {
+    path: 'orders',
+    loadChildren: () => import('./modules/orders/orders-module').then(m => m.OrdersModule)
+  },
+  {
+    path: 'courses',
+    loadChildren: () => import('./modules/courses/courses-module').then(m => m.CoursesModule)
+  },
+  {
     path: '**',
     redirectTo: 'users'
   },
