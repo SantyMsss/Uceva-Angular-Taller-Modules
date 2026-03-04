@@ -1,5 +1,16 @@
 import { Course } from "../../modules/courses/interfaces/courses.interface";
 
+/**
+ * Listado de cursos académicos disponibles en el sistema.
+ *
+ * Esta constante simula una fuente de datos (mock) que representa
+ * información básica de cursos, utilizada para:
+ * - Pruebas unitarias
+ * - Desarrollo sin backend
+ * - Ejercicios académicos
+ *
+ * @type {Course[]}
+ */
 export const COURSES: Course[] = [
   { id: 1, name: 'Arquitectura de Software', instructor: 'Dr. Rivera', credits: 4, schedule: 'Lun-Mie 8:00-10:00', modality: 'Presencial' },
   { id: 2, name: 'Base de Datos II', instructor: 'Ing. Salazar', credits: 3, schedule: 'Mar-Jue 10:00-12:00', modality: 'Virtual' },

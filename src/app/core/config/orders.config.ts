@@ -1,5 +1,16 @@
 import { Order } from "../../modules/orders/interfaces/orders.interface";
 
+/**
+ * Listado de pedidos disponibles en el sistema.
+ *
+ * Esta constante simula una fuente de datos (mock) que representa
+ * información básica de pedidos, utilizada para:
+ * - Pruebas unitarias
+ * - Desarrollo sin backend
+ * - Ejercicios académicos
+ *
+ * @type {Order[]}
+ */
 export const ORDERS: Order[] = [
   { id: 1, customer: 'Carlos Ramírez', product: 'Leche entera', quantity: 3, total: 13500, status: 'Entregado' },
   { id: 2, customer: 'Ana Gómez', product: 'Queso campesino', quantity: 1, total: 8200, status: 'Pendiente' },
