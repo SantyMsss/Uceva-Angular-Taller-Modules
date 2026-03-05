@@ -1,0 +1,31 @@
+<table class="table table-striped border">
+	<thead>
+		<tr>
+			<th scope="col">Foto</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Email</th>
+			<th scope="col">Teléfono</th>
+			<th scope="col">País</th>
+			<th scope="col">Género</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (person of people; track person.login.uuid) {
+			<tr>
+				<td>
+					<img [src]="person.picture.thumbnail" [alt]="person.name.first" class="rounded-circle" width="40" height="40">
+				</td>
+				<td>{{ person.name.first }} {{ person.name.last }}</td>
+				<td>{{ person.email }}</td>
+				<td>{{ person.phone }}</td>
+				<td>{{ person.location.country }}</td>
+				<td>
+					<app-badge 
+						[text]="person.gender"
+						[type]="genderMap[person.gender]" >
+					</app-badge>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

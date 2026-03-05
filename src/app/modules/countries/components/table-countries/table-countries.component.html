@@ -1,0 +1,31 @@
+<table class="table table-striped border">
+	<thead>
+		<tr>
+			<th scope="col">Bandera</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Capital</th>
+			<th scope="col">Población</th>
+			<th scope="col">Idiomas</th>
+			<th scope="col">Región</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (country of countries; track country.cca3) {
+			<tr>
+				<td>
+					<img [src]="country.flags.png" [alt]="country.name.common" width="40" height="25">
+				</td>
+				<td>{{ country.name.common }}</td>
+				<td>{{ country.capital?.[0] ?? 'N/A' }}</td>
+				<td>{{ country.population | number }}</td>
+				<td>{{ getLanguages(country.languages) }}</td>
+				<td>
+					<app-badge 
+						[text]="country.region"
+						[type]="regionMap[country.region]" >
+					</app-badge>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
