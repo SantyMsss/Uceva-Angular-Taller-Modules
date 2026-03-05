@@ -18,4 +18,6 @@ export const NAVBAR_ITEMS: NavbarItem[] = [
     { label: 'Productos', url: '/products' },
     { label: 'Pedidos', url: '/orders' },
     { label: 'Cursos', url: '/courses' },
+    { label: 'Personas', url: '/people' },
+    { label: 'Países', url: '/countries' },
 ] 
