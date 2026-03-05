@@ -120,6 +120,33 @@ src/app/modules/users/components/table-users/
 └──table-users.component.ts
 ```
 
+## 🌐 APIs Consultadas
+
+El proyecto consume las siguientes APIs externas para obtener datos en tiempo real:
+
+### 1. REST Countries API
+- **URL:** `https://restcountries.com/v3.1/all`
+- **Método:** GET
+- **Descripción:** Retorna información de todos los países del mundo, incluyendo nombre, capital, región, población, idiomas, banderas y código CCA3.
+- **Documentación oficial:** https://restcountries.com/
+- **Servicio Angular:** `CountriesService`
+- **Campos utilizados:** `name`, `capital`, `region`, `population`, `languages`, `flags`, `cca3`
+
+### 2. Random User Generator API
+- **URL:** `https://randomuser.me/api/?results=10`
+- **Método:** GET
+- **Descripción:** Genera datos aleatorios de personas ficticias, incluyendo nombre, correo, teléfono, ubicación, foto de perfil, entre otros.
+- **Documentación oficial:** https://randomuser.me/documentation
+- **Servicio Angular:** `PeopleService`
+- **Campos utilizados:** `gender`, `name`, `location`, `email`, `login`, `dob`, `phone`, `cell`, `id`, `picture`, `nat`
+
+### Datos locales (mock)
+Los siguientes módulos utilizan datos estáticos definidos en archivos de configuración (`src/app/core/config/`), sin consumir APIs externas:
+- **Users** → `users.config.ts`
+- **Courses** → `courses.config.ts`
+- **Orders** → `orders.config.ts`
+- **Products** → `products.config.ts`
+
 ### 🎓 Observaciones Importantes
 
 - En este taller NO se utilizan componentes standalone
